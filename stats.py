@@ -22,14 +22,15 @@ def get_sorted_character_list(character_count):
     sorted_chars = []
 
     for c in character_count:
-        sorted_chars.append({
-            "char": c,
-            "num": character_count[c]
-        })
+        if c.isalpha():
+            sorted_chars.append({
+                "char": c,
+                "num": character_count[c]
+            })
     
     sorted_chars.sort(reverse=True, key=sort_on)
 
-    return f"sorted_chars: {sorted_chars}"
+    return sorted_chars
 
 
 #character_count("gustavoO")

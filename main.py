@@ -12,13 +12,13 @@ def main():
     char_count = get_character_count(book_text)
     sorted_char = get_sorted_character_list(char_count)
 
-    print(f"""
-============ BOOKBOT ============
-Analyzing book found at {file_path}
------------ Word Count ----------
-Found {word_count} total words
---------- Character Count -------
-{sorted_char}
-""")
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {file_path}")
+    print("----------- Word Count ----------")
+    print(f"Found {word_count} total words")
+    print("--------- Character Count -------")
+    for s in sorted_char:
+        print(f"{s['char']}: {s['num']}")
+    print("============= END ===============")
 
 main()
